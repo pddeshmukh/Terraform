@@ -81,7 +81,7 @@ resource "aws_instance" "web" {
 Note that every region has a different AMI ID. The AMI ID's keeps on changing so make sure you use the latest AMI ID from the AWS console.
 
 
-#### first_ec2.tf
+#### my-first-ec2.tf
 ```
 provider "aws" {
   region     = "us-west-2"
