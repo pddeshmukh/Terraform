@@ -1,15 +1,14 @@
-#Getting started with Terraform 
+# Getting started with Terraform 
 
-Step 1: Download the binary for terraform from below link
+### Step 1: Download the binary for terraform from below link
 `https://releases.hashicorp.com/terraform/0.15.5/terraform_0.15.5_linux_amd64.zip`
 
-Step 2: Extract the binary using unzip command
-unzip /terraform_0.15.5_linux_amd64.zip
+### Step 2: Extract the binary using unzip command
+`unzip /terraform_0.15.5_linux_amd64.zip`
 
-Step 3: Set the path for the terraform 
-You need to add it to your ~/.profile or ~/.bashrc file. 
-
-export PATH="$PATH:/path/to/dir"
+### Step 3: Set the path for the terraform 
+`You need to add it to your ~/.profile or ~/.bashrc file. 
+export PATH="$PATH:/path/to/dir"`
 
 Depending on what you're doing, you also may want to symlink to binaries:
 
@@ -18,23 +17,27 @@ sudo ln -s /path/to/binary binary-name
 
 Note that this will not automatically update your path for the remainder of the session. To do this, you should run:
 
-source ~/.profile 
+`source ~/.profile 
 or
-source ~/.bashrc
+source ~/.bashrc`
 
-#Configuration Syntax 
+# Configuration Syntax 
+
 The syntax of Terraform configurations is called HashiCorp Configuration Language (HCL). 
 It is meant to strike a balance between human readable and editable as well as being machine-friendly. 
 For machine-friendliness, Terraform can also read JSON configurations. 
 
-Terraform Syntax
+# Terraform Syntax
 
 Here is an example of Terraform's HCL syntax:
 
-# An AMI
+An AMI
+```
 variable "ami" {
   description = "the AMI to use"
 }
+```
+
 
 /* A multi
    line comment. */
