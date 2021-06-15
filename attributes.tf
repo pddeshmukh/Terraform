@@ -1,3 +1,5 @@
+# This terraform code is used to create aws resources and use them as attributes and outputs 
+
 resource "aws_eip" "lb" {
   vpc      = true
 }
