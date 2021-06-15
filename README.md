@@ -84,13 +84,13 @@ Note that every region has a different AMI ID. The AMI ID's keeps on changing so
 #### my-first-ec2.tf
 ```
 provider "aws" {
-  region     = "us-west-2"
+  region     = "eu-west-1"
   access_key = "PUT-YOUR-ACCESS-KEY-HERE"
   secret_key = "PUT-YOUR-SECRET-KEY-HERE"
 }
 
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
+resource "aws_instance" "my_ec2" {
+   ami = "ami-063d4ab14480ac177"
    instance_type = "t2.micro"
 }
 ```
