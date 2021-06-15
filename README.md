@@ -30,7 +30,7 @@ The syntax of Terraform configurations is called HashiCorp Configuration Languag
 It is meant to strike a balance between human readable and editable as well as being machine-friendly. 
 For machine-friendliness, Terraform can also read JSON configurations. 
 
-### Terraform Syntax
+#### Terraform Syntax
 
 Here is an example of Terraform's HCL syntax:
 
@@ -73,3 +73,32 @@ resource "aws_instance" "web" {
 * Lists of primitive types can be made with square brackets ([]). Example: ["foo", "bar", "baz"].
 
 * Maps can be made with braces ({}) and colons (:): { "foo": "bar", "bar": "baz" }. Quotes may be omitted on keys, unless the key starts with a number, in which case quotes are required.Commas are required between key/value pairs for single line maps. A newline between key/value pairs is sufficient in multi-line maps.
+                                                                                                             
+
+# Create first EC2 instance in AWS using terraform 
+
+#### Important Note
+Note that every region has a different AMI ID. The AMI ID's keeps on changing so make sure you use the latest AMI ID from the AWS console.
+
+
+#### first_ec2.tf
+```
+provider "aws" {
+  region     = "us-west-2"
+  access_key = "PUT-YOUR-ACCESS-KEY-HERE"
+  secret_key = "PUT-YOUR-SECRET-KEY-HERE"
+}
+
+resource "aws_instance" "myec2" {
+   ami = "ami-082b5a644766e0e6f"
+   instance_type = "t2.micro"
+}
+```
+#### Commands:
+```
+terraform init
+terraform plan
+terraform apply
+````
+                                                                                                             
+                                                                                                             
