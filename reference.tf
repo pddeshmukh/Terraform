@@ -1,8 +1,8 @@
 # This code block is for creating ec2 instance and attaching public ip to it.
 
 resource "aws_instance" "my_first_ec2" {
-  ami = "ami-063d4ab14480ac177"
-  instance_type = "t2.micro"
+  ami = var.ami_id
+  instance_type = var.instance_type
 
   tags = {
     Name = "my-first-reference-instance"
