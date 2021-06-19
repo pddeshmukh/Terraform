@@ -1,12 +1,12 @@
 locals {
   common_tags = {
-    Owner = "DevOps Team"
+    Owner   = "DevOps Team"
     service = "frontend"
   }
 }
 
 resource "aws_instance" "my_local_ec2" {
-  ami = var.ami_id
+  ami           = var.ami_id
   instance_type = var.instance_type
 
   tags = local.common_tags
